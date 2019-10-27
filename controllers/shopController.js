@@ -1,5 +1,5 @@
 const db = require("../models");
-const bcrypt = require("bcrypt-node");
+const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 // Defining methods for the booksController
@@ -43,7 +43,7 @@ module.exports = {
       },
         createUser: function (req, res) {
           console.log(req.body);
-          bcrypt.hash(req.body.password, saltRounds,null, function (err, hash) {
+          bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
             db.Shop.create({
               username: req.body.username,
               password: hash,
@@ -83,3 +83,5 @@ module.exports = {
             .catch(err => res.status(422).json(err));
         }
 };
+
+

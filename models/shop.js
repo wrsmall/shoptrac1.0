@@ -23,7 +23,12 @@ module.exports = function (sequelize, DataTypes) {
     }
 
   });
- 
+  Shop.generateHash= function (password) {
+   return bcrypt.hashSync(password, bcrypt.genSaltSync(10),null); 
+  };
+  Shop.prototype.validPassword=function (password){
+    return bcrypt.compareSync(password, this.localPassword);
+  };
   Shop.associate = function (models) {
 
     Shop.hasMany(models.Task, {
