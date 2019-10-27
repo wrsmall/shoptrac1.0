@@ -1,0 +1,50 @@
+.center {
+    margin: auto;
+}
+.w-30{
+    width: 30%;
+}
+.postion{
+    position: relative;
+    margin-top: 15%;
+}
+.modal-height{
+    height:50%;
+    overflow-y: auto;
+}
+.modal-position{
+    position: absolute;
+    left: 25%;
+    top:30%;
+}
+.logout{
+ position: fixed;
+ left:75%;
+ top:3%;
+}
+.myborder{
+ border-style: double;
+ border-color: black;
+ border-width: 5px;
+}
+.jumboborder{
+ border-style: groove;
+ border-color:slategray;
+ border-width: 2px;
+}
+.logotext{
+    font-family: 'Monoton', cursive;
+}
+.text{
+    font-family: 'ZCOOL XiaoWei', serif;
+
+}
+.w-60{
+    width: 60%;
+}
+.statusborder{
+    border-style: double;
+    border-color: yellow;
+    border-width: 5px;
+   }
+
